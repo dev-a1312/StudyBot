@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study_Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Study_Bot</h1>
+            <p>Upload your study materials and ask questions. Get answers powered by AI.</p>
+        </header>
+
+        <section class="upload-section">
+            <div class="card">
+                <h2>Upload Your PDF</h2>
+                <p>Select a PDF file containing your study material (e.g., notes, books).</p>
+                <input type="file" id="pdf-upload" name="pdf" accept=".pdf"  class="file-input" />
+            </div>
+        </section>
+
+        <section class="question-section">
+            <div class="card">
+                <h2>Ask Your Question</h2>
+                <form id="question-form" onsubmit="submitQuestion(event)">
+                    <textarea id="question-input" placeholder="Type your question here..." rows="4" class="question-input"></textarea>
+                    <button type="submit" id="submit-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="answer-section" id="answer-section">
+            <h2>Answer</h2>
+            <div id="answer-output" class="answer-output">
+                <!-- AI-generated answer will appear here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

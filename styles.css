@@ -1,0 +1,190 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Background and Layout */
+body {
+    background: linear-gradient(135deg, #7702f4, #2575fc);
+    color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container for the whole content */
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    background: rgba(228, 210, 242, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Card Design for Upload and Question Sections */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* File Upload Section */
+.file-input {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 15px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.file-input:hover {
+    border-color: #6a11cb;
+}
+
+/* Question Input Section */
+.question-input {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    resize: none;
+    background: #f9f9f9;
+    margin-top: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.question-input:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2575fc;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Answer Section Styling */
+.answer-section {
+    margin-top: 40px;
+}
+
+.answer-output {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 120px;
+    color: #444;
+    border: 2px solid #ddd;
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .file-input, .question-input, button {
+        font-size: 1rem;
+    }
+}
+.answer-output::after {
+    content: " ";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background: #6a11cb;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
